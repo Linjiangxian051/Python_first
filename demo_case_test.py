@@ -17,7 +17,7 @@ for dirpath,dirname,filename in lst_files:
     for dir in dirname:
         print(os.path.join(dirpath,dir))
     for file in filename:
-        print(os.path.join(dirpath,file)+)
+        print(os.path.join(dirpath,file))
     print('-----------------------------------------------------------------------------------------')
 lst_t = [('Jack',20,'lol'),('Jam',32,'Music'),('Mare',43,'ball')]
 for i,j,k in lst_t:
