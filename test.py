@@ -14,3 +14,5 @@ print(date)
 
 item = 'wad'
 data_type = serial.Serial.read()
+print(item)
+

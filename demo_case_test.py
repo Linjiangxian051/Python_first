@@ -7,7 +7,7 @@ for filename in lst:
     if filename.endswith('.py'):
         print(filename)
 #path_ch = os.path.join(path,'package')
-#print('当前工作目录为：',path_ch)
+#print('当前工作目录为：',path_ch) 
 lst_files = os.walk('../') #获取指定目录下的迭代体对象，元组类型,[(路径，文件夹，文件名)]
 for dirpath,dirname,filename in lst_files:
     # print(dirpath)
