@@ -1,0 +1,7 @@
+{'id': '1001', 'name': '张三', 'english': 75, 'python': 46}
+{'id': '1002', 'name': '李四', 'english': 46, 'python': 98}
+{'id': '1003', 'name': '王五', 'english': 85, 'python': 64}
+{'id': '1004', 'name': '周六', 'english': 87, 'python': 88}
+{'id': '1005', 'name': '周日', 'english': 54, 'python': 65}
+{'id': '1006', 'name': '一月', 'english': 64, 'python': 46}
+{'id': '1009', 'name': '四月', 'english': 54, 'python': 75}
