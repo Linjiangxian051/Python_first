@@ -58,3 +58,37 @@ items  = ['Fruits','Books','Others']
 prices = [96,23,32]
 d = {item.upper():price for item,price in zip(items,prices)}
 print(d)
+
+'''
+zip()是Python的一个内建函数，它接受一系列可迭代的对象作为参数，将对象中对应的元素打包成一个个tuple（元组），
+然后返回由这些tuples组成的list（列表）。若传入参数的长度不等，则返回list的长度和参数中长度最短的对象相同。
+也就是说，该函数返回一个以元组为元素的列表，其中第 i 个元组包含每个参数序列的第 i 个元素。
+返回的列表长度被截断为最短的参数序列的长度。只有一个序列参数时，它返回一个1元组的列表。
+没有参数时，它返回一个空的列表。利用*号操作符，可以将list unzip（解压）.
+'''
+items  = ['one','two','three']
+prices = [1,2,3]
+a = zip(items,prices)
+print(a)
+for i in a:
+    print(i) #遍历通过zip的a后，a会丢失????????????????????????????????????????????????????
+print(a)
+
+for j in a:
+    print(j+'\n')
+
+d = dict(a)
+print(d)
+
+a = [('Fruits', 96),('Books', 23),('Others', 32)]
+
+print(a)
+for i in a:
+    print(i)
+d = dict(a)
+print(d)
+# d = dict(a)
+# print(d)
+# d = dict(zip(items,prices))
+# for i in d:
+#     print(i,d[i])
