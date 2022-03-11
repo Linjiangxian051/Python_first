@@ -1,3 +1,45 @@
+s = '*a**********bc*9876*a*b*c*******'
+s = s.strip('abc*')
+print(s)
+
+
+print('---------------------命令行参数---------------------------------')
+import getopt
+import sys
+
+def usage():
+    print("===========")
+    print("Usage")
+    print("python test_getopt.py -I:127.0.0.1 -p:8888 66 88 or python test_getopt.py --ip=127.0.0.1 --port=8888 66 88")
+    print("=======")
+
+def main():
+    '''
+
+    python test_getopt.py -i:127.0.0.1 -p:8888
+    '''
+    options,args = getopt.getopt(sys.argv[1:],'p:i:h',['help','port=','ip='])
+
+    for name,value in options:
+        if name in ('-h','--help'):
+            usage()
+    # for name,value in options:
+        if name in ('-i','--ip'):
+            print("{1}:{0}".format(value,name))
+        if name in ('-p','--port'):
+            print("{1}:{0}".format(value,name))
+
+main()
+
+print('---------------------打印分割线---------------------------------')
+
+def print_line(char,times):
+    print(char * times)
+
+print_line('*-',100)
+
+
+
 print('---------------------高铁售票系统---------------------------------')
 import prettytable as pt
 
