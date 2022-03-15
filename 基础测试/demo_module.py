@@ -12,14 +12,13 @@ print(pi)
 
 #导入自定义模块
 import module_calc
-print(module_calc.add(10,20))
-print(module_calc.div(10,20))
+print(module_calc.add(10, 20))
+print(module_calc.div(10, 20))
 
 #导入包里面的模块
-import package.module_A
 import package.module_B as b_mod #起个别名
 from package.module_B import b
 
-print(package.module_A.a)
+print(基础测试.package.module_A.a)
 print(b_mod.b)
 print(b)

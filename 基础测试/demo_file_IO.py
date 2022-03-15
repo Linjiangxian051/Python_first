@@ -20,6 +20,6 @@
 # target_file.close()
 # src_file.close()
 
-with open('./tb1.jpg','rb') as src_file:
-    with open('./copy1tb1.jpg','wb') as target_file:
+with open('tb1.jpg', 'rb') as src_file:
+    with open('copy1tb1.jpg', 'wb') as target_file:
         target_file.write(src_file.read())

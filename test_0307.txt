@@ -1,0 +1,37 @@
+#require "lynq-framework-parser.py"
+
+
+
+
+call "lynq_init_call";expect "";timeout "";success_goto "";failure_goto "";
+
+-enable:
+call "lynq_setup_data_call --handle=100";timeout "";success_goto "";
+-ping:
+call "@{ping www.baidu.com}";match "r'\d+ bytes from (\d+\.\d+\.\d+\.\d+): seq=\d+ ttl=\d+ time=\d+[\.]?\d+ ms'";timeout "3000";success_goto "";failure_goto "reping";
+timeout "1000";success_goto "";output "Ping Succeed"
+
+#-query:
+#call "lynq_query_registration_state_ext --handle=-1 --type=VOICE --regstate=-1 --imsregstate=-1 --nettype=-1 --radioTechFamily=-1";expect "ret>=0 and regstate!=-1 and (nettype==14 or nettype==20)";timeout "1000";success_goto "";failure_goto "requery";
+#timeout "5000";success_goto "callstart";
+
+-callstart:
+call "lynq_call --handle=-1 --addr=17638754311";expect "";timeout "1000";success_goto "out_success";failure_goto "out_failure";env "${handle_call}=handle"
+-out_failure:
+call "";expect "";timeout "10000";success_goto "callstart";failure_goto "";output "CALL FAILURED";
+-out_success:
+call "";expect "";timeout "10000";success_goto "hang_up";failure_goto "";output "CALL ALTERTING";
+
+-hang_up:
+call "lynq_call_hungup --handle=${handle_call}";expect "ret>=0";timeout "5500";success_goto "";failure_goto "rehang_up";
+call "";expect "";timeout "10000";success_goto "callstart";failure_goto "";
+success_goto "exit";output "HANG_UP SUCCESS";
+
+-reping:
+timeout "1000";success_goto "ping";output "Ping Failed,try ping again"
+
+#-requery:
+#timeout "3000";success_goto "query";failure_goto "";
+
+-rehang_up:
+timeout "3000";success_goto "hang_up"

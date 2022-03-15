@@ -1,3 +1,50 @@
+print("----------------------eval函数-----------------------------")
+class Func():
+    def __init__(self,argnames):
+        self.argnames = argnames
+
+start_func = Func('c_int')
+
+keyword_word = "start_func --handle=1"
+arg_list = keyword_word.split('--')
+print(arg_list)
+fun = arg_list[0].strip()
+print(fun)
+agru = eval(fun+".argnames")
+print("agru:",agru)
+
+
+print("----------------------strip函数-----------------------------")
+rfile = open('./test_0307.txt')
+file_list = rfile.readlines()
+print(file_list)
+print("*"*39)
+empty = []
+for i in range(len(file_list)):
+    if file_list[i].strip(' ') != '\n' and file_list[i][0] != '#':
+        empty.append(file_list[i].strip('\n'))
+# empty = []
+# for i in range(len(file_list)):
+#     if file_list[i].strip('\n') != '':
+#         empty.append((file_list[i].strip('\n')).strip(' '))
+
+print("*"*39)
+for item in empty:
+    print(item)
+print("*"*39)
+print(empty)
+
+keyword_str = 'call "lynq_ril_init"'
+print(ord('\"'))
+print( keyword_str[-2:0:-1])
+#print( keyword_str[0:6])
+keyword_arg=keyword_str[keyword_str.index('\"')+1:-1].strip()
+print(keyword_arg)
+
+print(eval(file_list))
+
+
+print("-----------------------清除首尾特定字符----------------------------------")
 s = '*a**********bc*9876*a*b*c*******'
 s = s.strip('abc*')
 print(s)
