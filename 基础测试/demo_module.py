@@ -19,6 +19,6 @@ print(module_calc.div(10, 20))
 import package.module_B as b_mod #起个别名
 from package.module_B import b
 
-print(基础测试.package.module_A.a)
+print()
 print(b_mod.b)
 print(b)

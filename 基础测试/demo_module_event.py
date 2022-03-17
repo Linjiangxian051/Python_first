@@ -7,7 +7,7 @@ def lighter():
     count = 0
     while True:
         if count == 5:  # 绿灯
-            #event.set()  #设置标志位，True
+            event.set()  #设置标志位，True
             print("\033[42;1m 绿灯亮\033[0m")
         elif count == 10:
             count =0  # 清零重新计数
