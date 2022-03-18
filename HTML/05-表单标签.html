@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form name="f" id="form" action="/s" class="fm  has-soutu" onsubmit="javascript:F.call('ps/sug','pssubmit');">
+        <span id="s_kw_wrap" class="bg s_ipt_wr new-pmd quickdelete-wrap">
+            <span class="soutu-btn">
+            </span><input type="text" class="s_ipt" name="wd" id="kw" maxlength="100" autocomplete="off">
+            <i class="c-icon quickdelete c-color-gray2" title="清空"></i>
+            <i class="quickdelete-line">
+            </i><span class="soutu-hover-tip" style="display: none;">按图片搜索</span>
+        </span>
+        <input type="hidden" name="rsv_spt" value="1">
+        <input type="hidden" name="rsv_iqid" value="0x8e9f05b200007745">
+        <input type="hidden" name="issp" value="1">
+        <input type="hidden" name="f" value="8">
+        <input type="hidden" name="rsv_bp" value="1">
+        <input type="hidden" name="rsv_idx" value="2">
+        <input type="hidden" name="ie" value="utf-8">
+        <input type="hidden" name="rqlang" value="">
+        <input type="hidden" name="tn" value="baiduhome_pg">
+        <input type="hidden" name="ch" value="">
+        <span class="btn_wr s_btn_wr bg" id="s_btn_wr">
+            <input type="submit" value="百度一下" id="su" class="btn self-btn bg s_btn">
+        </span>
+        <span class="tools">
+            <span id="mHolder">
+                <div id="mCon">
+                    <span>输入法</span>
+                </div>
+                <ul id="mMenu">
+                    <li><a href="javascript:;" name="ime_hw">手写</a></li>
+                    <li><a href="javascript:;" name="ime_py">拼音</a></li>
+                    <li class="ln"></li><li><a href="javascript:;" name="ime_cl">关闭</a></li></ul></span><span class="bd_bear_home"></span></span><input type="hidden" name="rsv_enter" value="1"><input type="hidden" name="rsv_dl" value="ib">
+    </form> -->
+
+    <!-- 把数据提交给Web服务器需要使用表单标签 -->
+    <form>
+        <p>
+            <!-- for：根据id名给指定id的标签设置光标 即：点击用户名时光标自动跳转-->
+            <label for="name">用户名:</label>
+            <input type="text" id="name">
+        </p>
+        <p>
+            <label>密码：</label>
+            <input type="password">
+        </p>
+        <p>
+            <label>性别：</label>
+            <input type="radio">男<!-- 单选框 -->
+            <input type="radio">女
+        </p>
+        <p>
+            <label>爱好：</label>
+            <input type="checkbox">学习<!-- 复选框 -->
+            <input type="checkbox">睡觉
+            <input type="checkbox">打游戏
+        </p>
+        <p>
+            <label>玉照：</label>
+            <input type="file">
+        </p>
+        <p>
+            <label>个人描述</label>
+            <textarea></textarea>
+        </p>
+        <p>
+            <label>籍贯：</label>
+            <select>
+                <option>北京</option>
+                <option>深圳</option>
+                <option>上海</option>
+                <option>广州</option>
+            </select>
+        </p>
+        <p>
+            <a href="https://www.baidu.com">
+                <input type="submit" value="提交">
+            </a>
+            <input type="reset"  value="重置">
+            <input type="button" value="按钮">
+        </p>
+    </form>
+</body>
+</html>
