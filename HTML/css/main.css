@@ -1,3 +1,4 @@
+/* 直接写选择器 不另外加style标签*/
 h1{
-    color: skyblue
+    color: skyblue;
 }

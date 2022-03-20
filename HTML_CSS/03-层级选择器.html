@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 层级选择器要有层级关系，根据层级关系获取子标签，给子标签添加样式 */
+        div div div{
+            color: brown;
+        }
+        div p{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 层级选择器 -->
+    <!-- 层级选择器不一定必须是父子关系，祖孙关系的子标签也可以找到，完成添加样式的操作 -->
+    <div>
+        <div>
+            哈哈哈
+        </div>
+        <div>
+            <div>
+                段落
+                <p>这是一个段落标签</p>
+            </div>
+            
+        </div>
+    </div>
+    <div>
+        略略
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* <!-- 组选择器就是多个选择器的组合，把功能的代码可以放到组选择器里面 --> */
+    .box1, .box2, .box3{
+        width: 100px;
+        height: 100px;
+    }
+    /* 追加样式 */
+    .box1{
+        background: red;
+    }
+    .box2:hover{
+        width: 300px;
+        /* height: 10px; */
+        background: green;
+    }
+    .box3{
+        background: yellow;
+    }
+    </style>
+</head>
+<body>
+    <!-- div.box1*3: 创建三个div并且指定class属性的名字是box1 -->
+    <p class="box1">第一段</p>
+    <p class="box2">第二段</p>
+    <p class="box3">第三段</p>
+    <div class="box2">一</div>
+</body>
+</html>

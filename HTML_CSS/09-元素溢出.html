@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* 设置元素溢出时需要在父标签选择器上设置 */
+            /* 可选择有：超出部分隐藏；超出部分显示（默认）；超出部分滚动显示 */
+            overflow: hidden; /* visible auto */
+        }
+        .box2{
+            width: 200px;
+            height: 50px;
+            background: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">xxxxxxx</div>
+    </div>
+</body>
+</html>

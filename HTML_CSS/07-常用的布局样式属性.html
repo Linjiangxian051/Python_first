@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            /* 设置背景图片 虚线 不重复显示 ，拉伸当前显示的图片 */
+            background: url("imgs/logo1.png") no-repeat;
+            /* border: 10px dotted red; */
+            border-top: 10px dotted red;
+            border-left: 10px solid yellowgreen;
+            border-right: 10px solid gray;
+            border-bottom: 10px double blue;
+            /* 设置浮动 */
+            float: right;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background: rebeccapurple;
+        }
+        .box2{
+            width: 50px;
+            height: 50px;
+            background: red;
+            float: left;
+        }
+        .box3{
+            width: 50px;
+            height: 50px;
+            background: green;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">哈哈哈</div>
+    <!-- div.box1>div.box1*2 创建一个父div在父div里面创建两个子div -->
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>
